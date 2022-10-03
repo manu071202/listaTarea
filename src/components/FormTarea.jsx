@@ -11,6 +11,13 @@ const FormTarea = () => {
     setArreglotareas([...arregloTareas, tarea]);
     setTarea("");
   };
+const borrarTarea= (nombre)=>{
+let arregloModificado = arregloTareas.filter((item)=> item !== nombre);
+//actualizar el state
+setArreglotareas(arregloModificado)
+
+}
+
 
   return (
     <div>
@@ -28,7 +35,7 @@ const FormTarea = () => {
           </Button>
         </Form.Group>
       </Form>
-      <ListaTarea></ListaTarea>
+      <ListaTarea arregloTareas={arregloTareas} borrarTarea={borrarTarea} ></ListaTarea>
     </div>
   );
 };
