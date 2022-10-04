@@ -3,15 +3,16 @@ import { Form, Button } from "react-bootstrap";
 import ListaTarea from "./ListaTarea";
 
 const FormTarea = () => {
+  const tareasLocalStorage= JSON.parse(localStorage.getItem('listaTareas')) || [];
   const [tarea, setTarea] = useState("");
-  const [arregloTareas, setArreglotareas] = useState([]);
+  const [arregloTareas, setArreglotareas] = useState(tareasLocalStorage);
 
   //ciclo de vida de los componenetes
 useEffect(()=>{
-console.log('prueba de ciclo de vida')
 
+localStorage.setItem('listaTareas', JSON.stringify(arregloTareas))
 
-},[])
+},[arregloTareas])
 
 
 
