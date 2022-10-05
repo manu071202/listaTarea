@@ -33,7 +33,7 @@ setArreglotareas(arregloModificado)
     <div>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3 d-flex">
-        Formcontrol es el input
+        
           <Form.Control
             type="text"
             placeholder="ingrese una tarea"
